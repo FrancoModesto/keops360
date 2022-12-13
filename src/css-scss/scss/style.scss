@@ -1,6 +1,210 @@
+//VARIABLES
+$title-font: 'Fjalla One', sans-serif;
+$second-font: 'Dosis', sans-serif;
+
+$myBlack: #1f2124;
+$myGrey: #9fa3a9;
+$myGreen: #8ac166;
+$myDarkGreen: #53ab3c;
+$myBlue: #357fb2;
+$myDarkBlue: #1a6699;
+
+$commonShadow: 0 0 1em $myGrey;
+$darkShadow: 0 0em 1em $myBlack;
+
+//ALL
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    background-color: whitesmoke;
+    font-family: $second-font;
+}
+
+::selection {
+    background-color: $myDarkBlue;
+    color: whitesmoke
+}
+
+::-webkit-scrollbar {
+    width: 0.75em;
+    background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.5em;
+    background-color: $myBlue;
+
+    &:hover {
+        border-radius: 0.5em;
+        background-color: $myDarkBlue;
+    }
+}
+
+.goTopArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3em;
+    border-radius: 50%;
+}
+
+.goTopButton {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+
+    background-color: whitesmoke;
+    border: whitesmoke solid 0.125em;
+    border-radius: 50%;
+    box-shadow: $commonShadow;
+
+    &:hover {
+        background-color: $myDarkBlue;
+        border: $myDarkBlue solid 0.125em;
+        border-radius: 50%;
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.5em 8em 1.5em 8em;
+
+    background-color: whitesmoke;
+    box-shadow: $commonShadow;
+}
+
+header .brand {
+    width: 25em;
+    transition: all 0.3s ease;
+
+    img {
+        width: 100%;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+header nav ul {
+    list-style-type: none;
+
+    li {
+        display: inline-block;
+        margin: 2em;
+
+        a {
+            text-decoration: none;
+            color: $myBlue;
+            font-size: 1.8rem;
+            font-weight: normal;
+
+            &:hover {
+                text-decoration: none;
+                color: $myDarkBlue;
+                font-weight: bold;
+            }
+        }
+
+        .green {
+            color: $myGreen;
+
+            &:hover {
+                color: $myDarkGreen;
+            }
+        }
+    }
+}
+
+main {
+    margin: 3em 8em 3em 8em;
+}
+
+footer {
+    height: 13em;
+    background-color: $myGrey;
+    box-shadow: $commonShadow;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.8em;
+}
+
+.creator-text {
+    color: $myBlack;
+    font-size: 1.1rem;
+
+    margin-top: 3em;
+    margin-right: 1.25em;
+
+    span {
+        margin-left: 0.3em;
+
+        &:hover {
+            color: $myDarkBlue;
+        }
+    }
+}
+
+.creator-menu {
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 3em;
+
+    li {
+        margin-left: 0.6em;
+        margin-right: 0.6em;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+            box-shadow: $darkShadow;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: $myDarkGreen;
+                box-shadow: none;
+                filter: drop-shadow(0 0 0.5em $myDarkGreen);
+            }
+
+            img {
+                width: 2.8em;
+            }
+        }
+    }
+}
+
+.copy {
+    font-size: 1rem;
+    text-align: center;
+    color: $myBlack;
 }

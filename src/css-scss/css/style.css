@@ -4,3 +4,182 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+body {
+  font-size: 16px;
+  background-color: whitesmoke;
+  font-family: "Dosis", sans-serif;
+}
+
+::selection {
+  background-color: #1a6699;
+  color: whitesmoke;
+}
+
+::-webkit-scrollbar {
+  width: 0.75em;
+  background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-track {
+  background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5em;
+  background-color: #357fb2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 0.5em;
+  background-color: #1a6699;
+}
+
+.goTopArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  border-radius: 50%;
+}
+
+.goTopButton {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  background-color: whitesmoke;
+  border: whitesmoke solid 0.125em;
+  border-radius: 50%;
+  box-shadow: 0 0 1em #9fa3a9;
+}
+
+.goTopButton:hover {
+  background-color: #1a6699;
+  border: #1a6699 solid 0.125em;
+  border-radius: 50%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em 8em 1.5em 8em;
+  background-color: whitesmoke;
+  box-shadow: 0 0 1em #9fa3a9;
+}
+
+header .brand {
+  width: 25em;
+  transition: all 0.3s ease;
+}
+
+header .brand img {
+  width: 100%;
+}
+
+header .brand:hover {
+  transform: scale(1.05);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 2em;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #357fb2;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+header nav ul li a:hover {
+  text-decoration: none;
+  color: #1a6699;
+  font-weight: bold;
+}
+
+header nav ul li .green {
+  color: #8ac166;
+}
+
+header nav ul li .green:hover {
+  color: #53ab3c;
+}
+
+main {
+  margin: 3em 8em 3em 8em;
+}
+
+footer {
+  height: 13em;
+  background-color: #9fa3a9;
+  box-shadow: 0 0 1em #9fa3a9;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.8em;
+}
+
+.creator-text {
+  color: #1f2124;
+  font-size: 1.1rem;
+  margin-top: 3em;
+  margin-right: 1.25em;
+}
+
+.creator-text span {
+  margin-left: 0.3em;
+}
+
+.creator-text span:hover {
+  color: #1a6699;
+}
+
+.creator-menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.creator-menu li {
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+}
+
+.creator-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0em 1em #1f2124;
+  transition: all 0.3s ease;
+}
+
+.creator-menu li a:hover {
+  transform: scale(1.1);
+  background-color: #53ab3c;
+  box-shadow: none;
+  filter: drop-shadow(0 0 0.5em #53ab3c);
+}
+
+.creator-menu li a img {
+  width: 2.8em;
+}
+
+.copy {
+  font-size: 1rem;
+  text-align: center;
+  color: #1f2124;
+}
