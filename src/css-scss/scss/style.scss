@@ -1,16 +1,18 @@
 //VARIABLES
-$title-font: 'Fjalla One', sans-serif;
-$second-font: 'Dosis', sans-serif;
+$myFont: 'Dosis', sans-serif;
 
 $myBlack: #1f2124;
 $myGrey: #9fa3a9;
+$myDarkGrey: #393d42;
 $myGreen: #8ac166;
 $myDarkGreen: #53ab3c;
 $myBlue: #357fb2;
 $myDarkBlue: #1a6699;
 
 $commonShadow: 0 0 1em $myGrey;
+$commonDarkShadow: 0 0 1em $myDarkGrey;
 $darkShadow: 0 0em 1em $myBlack;
+
 
 //ALL
 * {
@@ -21,9 +23,10 @@ $darkShadow: 0 0em 1em $myBlack;
 }
 
 body {
-    font-size: 16px;
     background-color: whitesmoke;
-    font-family: $second-font;
+    font-size: 16px;
+    font-family: $myFont;
+    color: $myDarkGrey;
 }
 
 ::selection {
@@ -67,15 +70,17 @@ body {
     background-color: whitesmoke;
     border: whitesmoke solid 0.125em;
     border-radius: 50%;
-    box-shadow: $commonShadow;
+    box-shadow: $commonDarkShadow;
 
     &:hover {
-        background-color: $myDarkBlue;
-        border: $myDarkBlue solid 0.125em;
+        background-color: $myBlue;
+        border: $myBlue solid 0.125em;
         border-radius: 50%;
     }
 }
 
+
+//HEADER
 header {
     position: sticky;
     top: 0;
@@ -99,7 +104,7 @@ header .brand {
     }
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.025);
     }
 }
 
@@ -133,48 +138,62 @@ header nav ul {
     }
 }
 
+
+//MAIN
 main {
-    margin: 3em 8em 3em 8em;
+    margin: 5em 8em 5em 8em;
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 0.3em;
+
+    font-size: 5rem;
+    color: $myGreen;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+
+//FOOTER
 footer {
-    height: 13em;
     background-color: $myGrey;
     box-shadow: $commonShadow;
 }
 
 .creator {
+    padding-top: 3em;
+    margin-bottom: 1.8em;
+
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-bottom: 1.8em;
 }
 
-.creator-text {
-    color: $myBlack;
-    font-size: 1.1rem;
-
-    margin-top: 3em;
+.creator h3 {
     margin-right: 1.25em;
+
+    color: $myDarkGrey;
+    font-size: 1.3rem;
 
     span {
         margin-left: 0.3em;
 
         &:hover {
             color: $myDarkBlue;
+            text-shadow: 0 0 0.5em $myBlue;
         }
     }
 }
 
-.creator-menu {
+.creator ul {
     list-style-type: none;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-top: 3em;
 
     li {
         margin-left: 0.6em;
@@ -204,7 +223,9 @@ footer {
 }
 
 .copy {
-    font-size: 1rem;
+    padding-bottom: 2.5em;
+
+    font-size: 1.2rem;
     text-align: center;
-    color: $myBlack;
+    color: $myDarkGrey;
 }
