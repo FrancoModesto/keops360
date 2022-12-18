@@ -116,10 +116,6 @@ header nav ul li .green:hover {
   color: #53ab3c;
 }
 
-main {
-  margin: 5em 8em 5em 8em;
-}
-
 .slider {
   position: relative;
   overflow: hidden;
@@ -205,6 +201,10 @@ main {
   box-shadow: 0 0 1em #53ab3c;
   transition: all .5s ease;
   transform: scale(1.2);
+}
+
+main {
+  margin: 5em 8em 5em 8em;
 }
 
 h1 {

@@ -142,11 +142,7 @@ header nav ul {
 }
 
 
-//MAIN
-main {
-    margin: 5em 8em 5em 8em;
-}
-
+//SLIDER
 .slider {
     position: relative;
 
@@ -241,6 +237,12 @@ main {
             transform: scale(1.2);
         }
     }
+}
+
+
+//MAIN
+main {
+    margin: 5em 8em 5em 8em;
 }
 
 h1 {

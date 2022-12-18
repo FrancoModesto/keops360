@@ -1,8 +1,8 @@
 //SLIDER
 const container = document.querySelector(".container")
+const puntos = document.querySelectorAll(".punto")
 const flechaI = document.querySelector(".I")
 const flechaD = document.querySelector(".D")
-const puntos = document.querySelectorAll(".punto")
 
 let puntoActivo = 0
 
@@ -22,8 +22,9 @@ puntos.forEach((cadaPunto, i) => {
     })
 })
 
+
 //SLIDER - FLECHAS
-flechaI.addEventListener("click", () => {
+function moverSliderIzquierda() {
     let posicion = puntoActivo
 
     if (posicion > 0) {
@@ -45,10 +46,9 @@ flechaI.addEventListener("click", () => {
     }
 
     puntos[puntoActivo].classList.add("activo")
+}
 
-})
-
-flechaD.addEventListener("click", () => {
+function moverSliderDerecha() {
     let posicion = puntoActivo
 
     if (posicion < puntos.length - 1) {
@@ -69,5 +69,12 @@ flechaD.addEventListener("click", () => {
     }
 
     puntos[puntoActivo].classList.add("activo")
+}
 
-})
+flechaI.addEventListener("click", moverSliderIzquierda)
+
+flechaD.addEventListener("click", moverSliderDerecha)
+
+
+//SLIDER - MOVIMIENTO AUTOMÁTICO
+setInterval(moverSliderDerecha, 5000);
