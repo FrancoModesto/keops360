@@ -3,6 +3,7 @@ $myFont: 'Dosis', sans-serif;
 
 $myBlack: #1f2124;
 $myGrey: #9fa3a9;
+$myWhite: whitesmoke;
 $myDarkGrey: #393d42;
 $myGreen: #8ac166;
 $myDarkGreen: #53ab3c;
@@ -23,7 +24,7 @@ $darkShadow: 0 0em 1em $myBlack;
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: $myWhite;
     font-size: 16px;
     font-family: $myFont;
     color: $myDarkGrey;
@@ -31,16 +32,16 @@ body {
 
 ::selection {
     background-color: $myDarkBlue;
-    color: whitesmoke
+    color: $myWhite
 }
 
 ::-webkit-scrollbar {
     width: 0.75em;
-    background-color: whitesmoke;
+    background-color: $myWhite;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: whitesmoke;
+    background-color: $myWhite;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -63,12 +64,13 @@ body {
 }
 
 .goTopButton {
+    z-index: 1;
     position: fixed;
     bottom: 2em;
     right: 2em;
 
-    background-color: whitesmoke;
-    border: whitesmoke solid 0.125em;
+    background-color: $myWhite;
+    border: $myWhite solid 0.125em;
     border-radius: 50%;
     box-shadow: $commonDarkShadow;
 
@@ -82,6 +84,7 @@ body {
 
 //HEADER
 header {
+    z-index: 1;
     position: sticky;
     top: 0;
 
@@ -89,15 +92,16 @@ header {
     align-items: center;
     justify-content: space-between;
 
+    height: 15vh;
     padding: 1.5em 8em 1.5em 8em;
 
-    background-color: whitesmoke;
+    background-color: $myWhite;
     box-shadow: $commonShadow;
 }
 
 header .brand {
     width: 25em;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
 
     img {
         width: 100%;
@@ -119,12 +123,11 @@ header nav ul {
             text-decoration: none;
             color: $myBlue;
             font-size: 1.8rem;
-            font-weight: normal;
 
             &:hover {
                 text-decoration: none;
-                color: $myDarkBlue;
                 font-weight: bold;
+                color: $myDarkBlue;
             }
         }
 
@@ -142,6 +145,102 @@ header nav ul {
 //MAIN
 main {
     margin: 5em 8em 5em 8em;
+}
+
+.slider {
+    position: relative;
+
+    overflow: hidden;
+    height: 85vh;
+    box-shadow: $commonShadow;
+
+    .container {
+        width: calc(100% * 3);
+        height: 100%;
+        background-color: rgba(31, 33, 36, 0.025);
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        transition: all .5s ease;
+        transform: translateX(0%);
+
+        img {
+            width: calc(100% / 3);
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .flechas {
+        position: absolute;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .flecha {
+            width: 2.5em;
+            opacity: 0.3;
+
+            &.I {
+                margin-left: 5em;
+            }
+
+            &.D {
+                margin-right: 5em;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .puntos {
+        position: absolute;
+        bottom: 0;
+
+        list-style-type: none;
+        width: 100%;
+        height: 10%;
+        background-color: rgba(31, 33, 36, 0.1);
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .punto {
+            width: 1em;
+            height: 1em;
+            margin: 1em;
+
+            border-radius: 50%;
+            background-color: rgba(31, 33, 36, 0.2);
+            box-shadow: $commonShadow;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(31, 33, 36, 0.3);
+            }
+        }
+
+        .punto.activo {
+            background-color: rgba(138, 193, 102, 0.8);
+            box-shadow: 0 0 1em $myDarkGreen;
+
+            transition: all .5s ease;
+            transform: scale(1.2);
+        }
+    }
 }
 
 h1 {
@@ -206,7 +305,7 @@ footer {
 
             border-radius: 50%;
             box-shadow: $darkShadow;
-            transition: all 0.3s ease;
+            transition: all .3s ease;
 
             &:hover {
                 transform: scale(1.1);
