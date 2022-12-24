@@ -1,18 +1,18 @@
 //VARIABLES
 $myFont: 'Dosis', sans-serif;
 
-$myBlack: #1f2124;
+$myBlack: #393d42;
 $myGrey: #9fa3a9;
+$myDarkGrey: #64738c;
 $myWhite: whitesmoke;
-$myDarkGrey: #393d42;
-$myGreen: #8ac166;
-$myDarkGreen: #53ab3c;
 $myBlue: #357fb2;
 $myDarkBlue: #1a6699;
+$myGreen: #8ac166;
+$myDarkGreen: #53ab3c;
 
 $commonShadow: 0 0 1em $myGrey;
-$commonDarkShadow: 0 0 1em $myDarkGrey;
 $darkShadow: 0 0em 1em $myBlack;
+$darkerShadow: 0 0em 1em black;
 
 
 //ALL
@@ -64,7 +64,7 @@ body {
 }
 
 .goTopButton {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     bottom: 2em;
     right: 2em;
@@ -72,11 +72,11 @@ body {
     background-color: $myWhite;
     border: $myWhite solid 0.125em;
     border-radius: 50%;
-    box-shadow: $commonDarkShadow;
+    box-shadow: $darkShadow;
 
     &:hover {
-        background-color: $myBlue;
-        border: $myBlue solid 0.125em;
+        background-color: $myDarkBlue;
+        border: $myDarkBlue solid 0.125em;
         border-radius: 50%;
     }
 }
@@ -84,7 +84,7 @@ body {
 
 //HEADER
 header {
-    z-index: 1;
+    z-index: 2;
     position: sticky;
     top: 0;
 
@@ -92,7 +92,7 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    height: 15vh;
+    height: 13vh;
     padding: 1.5em 8em 1.5em 8em;
 
     background-color: $myWhite;
@@ -100,7 +100,7 @@ header {
 }
 
 header .brand {
-    width: 25em;
+    width: 20em;
     transition: all .3s ease;
 
     img {
@@ -122,7 +122,7 @@ header nav ul {
         a {
             text-decoration: none;
             color: $myBlue;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
 
             &:hover {
                 text-decoration: none;
@@ -145,15 +145,12 @@ header nav ul {
 //SLIDER
 .slider {
     position: relative;
-
     overflow: hidden;
-    height: 85vh;
-    box-shadow: $commonShadow;
+    height: 87vh;
 
     .container {
         width: calc(100% * 3);
-        height: 100%;
-        background-color: rgba(31, 33, 36, 0.025);
+        height: 92%;
 
         display: flex;
         flex-flow: row nowrap;
@@ -175,7 +172,7 @@ header nav ul {
         top: 0;
 
         width: 100%;
-        height: 100%;
+        height: 92%;
 
         display: flex;
         align-items: center;
@@ -183,7 +180,7 @@ header nav ul {
 
         .flecha {
             width: 2.5em;
-            opacity: 0.3;
+            opacity: 0.8;
 
             &.I {
                 margin-left: 5em;
@@ -195,19 +192,17 @@ header nav ul {
 
             &:hover {
                 cursor: pointer;
-                opacity: 0.4;
+                opacity: 1;
             }
         }
     }
 
     .puntos {
-        position: absolute;
-        bottom: 0;
+        width: 100%;
+        height: 8%;
 
         list-style-type: none;
-        width: 100%;
-        height: 10%;
-        background-color: rgba(31, 33, 36, 0.1);
+        background-color: $myDarkGrey;
 
         display: flex;
         flex-flow: row nowrap;
@@ -215,22 +210,22 @@ header nav ul {
         align-items: center;
 
         .punto {
+            z-index: 1;
             width: 1em;
             height: 1em;
             margin: 1em;
 
             border-radius: 50%;
-            background-color: rgba(31, 33, 36, 0.2);
-            box-shadow: $commonShadow;
+            box-shadow: $darkerShadow;
 
             &:hover {
                 cursor: pointer;
-                background-color: rgba(31, 33, 36, 0.3);
+                background-color: $myGrey;
             }
         }
 
         .punto.activo {
-            background-color: rgba(138, 193, 102, 0.8);
+            background-color: $myGreen;
             box-shadow: 0 0 1em $myDarkGreen;
 
             transition: all .5s ease;
@@ -242,19 +237,85 @@ header nav ul {
 
 //MAIN
 main {
-    margin: 5em 8em 5em 8em;
+    margin: 10em 10em 8em 10em;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.8em;
 
     font-size: 5rem;
     color: $myGreen;
 }
 
-p {
-    font-size: 1.2rem;
+.modulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
+
+.card {
+    position: relative;
+    width: 18em;
+    height: 22em;
+
+    .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1.5em;
+        border-radius: 10px;
+        box-shadow: $commonShadow;
+        transition: .5s;
+    }
+
+    .front {
+        transform: perspective(1000px) rotateY(0deg);
+        background-color: $myWhite;
+        justify-content: space-around;
+
+        img {
+            width: 60%;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+
+    .back {
+        transform: perspective(1000px) rotateY(180deg);
+        background-color: $myDarkGrey;
+
+        p {
+            font-size: 1.2rem;
+            color: $myWhite;
+
+            span {
+                margin-right: 0.2em;
+                color: $myGreen;
+            }
+        }
+    }
+
+    &:hover .front {
+        transform: perspective(1000px) rotateY(180deg);
+    }
+
+    &:hover .back {
+        transform: perspective(1000px) rotateY(360deg);
+    }
 }
 
 
@@ -276,8 +337,8 @@ footer {
 .creator h3 {
     margin-right: 1.25em;
 
-    color: $myDarkGrey;
     font-size: 1.3rem;
+    color: $myBlack;
 
     span {
         margin-left: 0.3em;
@@ -328,5 +389,5 @@ footer {
 
     font-size: 1.2rem;
     text-align: center;
-    color: $myDarkGrey;
+    color: $myBlack;
 }
