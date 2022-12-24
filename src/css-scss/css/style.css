@@ -120,6 +120,7 @@ header nav ul li .green:hover {
   position: relative;
   overflow: hidden;
   height: 87vh;
+  box-shadow: 0 0 1em #9fa3a9;
 }
 
 .slider .container {
@@ -224,8 +225,8 @@ h1 {
 
 .card {
   position: relative;
-  width: 18em;
-  height: 22em;
+  width: 16em;
+  height: 20em;
 }
 
 .card .face {
@@ -236,7 +237,6 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 1.5em;
   border-radius: 10px;
   box-shadow: 0 0 1em #9fa3a9;
@@ -246,6 +246,7 @@ h1 {
 .card .front {
   transform: perspective(1000px) rotateY(0deg);
   background-color: whitesmoke;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -261,10 +262,12 @@ h1 {
 .card .back {
   transform: perspective(1000px) rotateY(180deg);
   background-color: #64738c;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .card .back p {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: whitesmoke;
 }
 
@@ -279,6 +282,15 @@ h1 {
 
 .card:hover .back {
   transform: perspective(1000px) rotateY(360deg);
+}
+
+.nosotros {
+  margin-top: 10em;
+}
+
+.nosotros h1 {
+  text-align: center;
+  margin-bottom: 0.8em;
 }
 
 footer {
