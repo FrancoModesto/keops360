@@ -149,7 +149,7 @@ header nav ul {
     height: 87vh;
 
     .container {
-        width: calc(100% * 3);
+        width: calc(100% * 6);
         height: 92%;
 
         display: flex;
@@ -161,7 +161,7 @@ header nav ul {
         transform: translateX(0%);
 
         img {
-            width: calc(100% / 3);
+            width: calc(100% / 6);
             height: 100%;
             object-fit: contain;
         }
@@ -241,20 +241,24 @@ main {
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 0.8em;
-
     font-size: 5rem;
     color: $myGreen;
 }
 
 .modulos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 3em;
+    h1 {
+        text-align: center;
+        margin-bottom: 0.8em;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+    }
 }
 
 .card {
