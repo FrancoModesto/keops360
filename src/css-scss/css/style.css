@@ -32,7 +32,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  border-radius: 0.5em;
   background-color: #1a6699;
 }
 
@@ -114,6 +113,17 @@ header nav ul li .green {
 
 header nav ul li .green:hover {
   color: #53ab3c;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.9em;
+  font-size: 4.5rem;
+  color: #8ac166;
+}
+
+h1.blue {
+  color: #357fb2;
 }
 
 .slider {
@@ -200,22 +210,13 @@ header nav ul li .green:hover {
   transform: scale(1.2);
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 0.9em;
-  font-size: 4.5rem;
-  color: #8ac166;
-}
-
-h1.blue {
-  color: #357fb2;
-}
-
 .modulos {
-  margin: 8em 10em 0 10em;
+  margin-top: 8em;
 }
 
 .modulos .cards {
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -255,7 +256,7 @@ h1.blue {
   width: 60%;
 }
 
-.card .front h3 {
+.card .front h2 {
   text-align: center;
   font-size: 2rem;
   color: #64738c;
@@ -287,13 +288,14 @@ h1.blue {
 }
 
 .nosotros {
-  margin: 9em 0 0 0;
+  margin-top: 9em;
   padding: 8em 0 9em 0;
   background-color: #eeeeee;
 }
 
 .nosotros .boards {
-  margin: 0 10em 0 10em;
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,11 +332,55 @@ h1.blue {
 .board .content {
   width: 100%;
   height: 100%;
+  display: flex;
   background-color: #8ac166;
 }
 
 .board .content.blue {
   background-color: #357fb2;
+}
+
+.board .content .board-img {
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 0em 1em #393d42;
+}
+
+.board .content .board-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.board .content .board-text {
+  width: 70%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.board .content .board-text::-webkit-scrollbar-thumb {
+  background-color: #9fa3a9;
+}
+
+.board .content .board-text::-webkit-scrollbar-thumb:hover {
+  background-color: #64738c;
+}
+
+.board .content .board-text p {
+  font-size: 1.3rem;
+  color: whitesmoke;
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+}
+
+.board .content .board-text.right {
+  direction: rtl;
+}
+
+.board .content .board-text.right p {
+  direction: ltr;
 }
 
 .board:hover :first-child {
@@ -346,10 +392,11 @@ h1.blue {
 }
 
 .contactanos {
-  margin: 8em 10em 5em 10em;
+  margin-top: 8em;
 }
 
 footer {
+  margin-top: 5em;
   background-color: #9fa3a9;
   box-shadow: 0 0 1em #9fa3a9;
 }
