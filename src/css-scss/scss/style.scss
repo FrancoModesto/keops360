@@ -11,6 +11,7 @@ $myDarkBlue: #1a6699;
 $myGreen: #8ac166;
 $myDarkGreen: #53ab3c;
 
+$lightShadow: 0 0 1em $myLightGrey;
 $commonShadow: 0 0 1em $myGrey;
 $darkShadow: 0 0em 1em $myBlack;
 $darkerShadow: 0 0em 1em black;
@@ -115,10 +116,10 @@ header .brand {
 header nav ul {
     list-style-type: none;
 
-    li {
-        display: inline-block;
-        margin: 2em;
+    display: flex;
+    gap: 4em;
 
+    li {
         a {
             text-decoration: none;
             color: $myBlue;
@@ -451,10 +452,72 @@ h1 {
     margin-top: 8em;
 }
 
+.contacto {
+    margin: auto;
+    height: 60vh;
+
+    display: flex;
+    align-items: center;
+
+    .redes,
+    .mail {
+        width: 50%;
+        height: 100%;
+    }
+
+    .redes {
+        border: $myLightGrey 3px solid;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+
+            font-size: 3.5rem;
+            color: $myDarkGrey;
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+                font-size: 2rem;
+                margin-bottom: 1em;
+                transition: all .3s ease;
+
+                a {
+                    display: flex;
+                    align-items: center;
+
+                    text-decoration: none;
+                    color: $myDarkGrey;
+
+                    img {
+                        width: 1.5em;
+                        margin-right: 1em;
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .mail {
+        background-color: $myLightGrey;
+    }
+}
+
 
 //FOOTER
 footer {
-    margin-top: 5em;
+    margin-top: 4em;
     background-color: $myGrey;
     box-shadow: $commonShadow;
 }
@@ -469,7 +532,7 @@ footer {
 }
 
 .creator h3 {
-    margin-right: 1.25em;
+    margin-right: 2em;
 
     font-size: 1.3rem;
     color: $myBlack;
@@ -486,20 +549,12 @@ footer {
 
 .creator ul {
     list-style-type: none;
-
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 1.25em;
 
     li {
-        margin-left: 0.6em;
-        margin-right: 0.6em;
-
         a {
             display: flex;
-            align-items: center;
-            justify-content: center;
-
             border-radius: 50%;
             box-shadow: $darkShadow;
             transition: all .3s ease;
