@@ -18,7 +18,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0.75em;
+  width: .75em;
   background-color: whitesmoke;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 0.5em;
+  border-radius: .5em;
   background-color: #357fb2;
 }
 
@@ -52,6 +52,7 @@ body {
   border: whitesmoke solid 0.125em;
   border-radius: 50%;
   box-shadow: 0 0em 1em #393d42;
+  transition: all .2s ease;
 }
 
 .goTopButton:hover {
@@ -114,7 +115,7 @@ header nav ul li .green:hover {
 
 h1 {
   text-align: center;
-  margin-bottom: 0.9em;
+  margin-bottom: .9em;
   font-size: 4.5rem;
   color: #8ac166;
 }
@@ -159,7 +160,8 @@ h1.blue {
 
 .slider .flechas .flecha {
   width: 2.5em;
-  opacity: 0.8;
+  opacity: .8;
+  transition: all .2s ease;
 }
 
 .slider .flechas .flecha.I {
@@ -193,6 +195,7 @@ h1.blue {
   margin: 1em;
   border-radius: 50%;
   box-shadow: 0 0em 1em black;
+  transition: all .2s ease;
 }
 
 .slider .puntos .punto:hover {
@@ -208,7 +211,7 @@ h1.blue {
 }
 
 .modulos {
-  margin-top: 8em;
+  margin-top: 15vh;
 }
 
 .modulos .cards {
@@ -272,7 +275,7 @@ h1.blue {
 }
 
 .card .back p span {
-  margin-right: 0.2em;
+  margin-right: .2em;
   color: #8ac166;
 }
 
@@ -285,8 +288,8 @@ h1.blue {
 }
 
 .nosotros {
-  margin-top: 9em;
-  padding: 8em 0 9em 0;
+  margin-top: 15vh;
+  padding: 15vh 0 2vh 0;
   background-color: #eeeeee;
 }
 
@@ -357,12 +360,20 @@ h1.blue {
   overflow-y: auto;
 }
 
+.board .content .board-text::-webkit-scrollbar {
+  background-color: #8ac166;
+}
+
+.board .content .board-text::-webkit-scrollbar-track {
+  background-color: #8ac166;
+}
+
 .board .content .board-text::-webkit-scrollbar-thumb {
-  background-color: #9fa3a9;
+  background-color: whitesmoke;
 }
 
 .board .content .board-text::-webkit-scrollbar-thumb:hover {
-  background-color: #64738c;
+  background-color: #d2d2d2;
 }
 
 .board .content .board-text p {
@@ -380,6 +391,14 @@ h1.blue {
   direction: ltr;
 }
 
+.board .content .board-text.right::-webkit-scrollbar {
+  background-color: #357fb2;
+}
+
+.board .content .board-text.right::-webkit-scrollbar-track {
+  background-color: #357fb2;
+}
+
 .board:hover :first-child {
   left: -100%;
 }
@@ -389,12 +408,13 @@ h1.blue {
 }
 
 .contactanos {
-  margin-top: 8em;
+  padding-top: 13vh;
+  background-color: #eeeeee;
 }
 
 .contacto {
   margin: auto;
-  height: 60vh;
+  height: 87vh;
   display: flex;
   align-items: center;
 }
@@ -406,7 +426,7 @@ h1.blue {
 }
 
 .contacto .redes {
-  border: #eeeeee 3px solid;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -448,10 +468,116 @@ h1.blue {
 
 .contacto .mail {
   background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacto .mail h2 {
+  text-align: center;
+  margin-bottom: .5em;
+  font-size: 3.5rem;
+  color: #64738c;
+}
+
+.contacto .mail form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+}
+
+.contacto .mail form .fix {
+  width: 40%;
+  height: 8em;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.contacto .mail form .cell {
+  height: 2.5em;
+  width: 40%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.1rem;
+  color: #64738c;
+  transition: all .2s ease;
+}
+
+.contacto .mail form .cell::-webkit-scrollbar-thumb {
+  background-color: #64738c;
+}
+
+.contacto .mail form .cell::-webkit-scrollbar-thumb:hover {
+  background-color: #1a6699;
+}
+
+.contacto .mail form .cell.msg {
+  resize: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.contacto .mail form .cell:focus {
+  background-color: #64738c;
+  color: whitesmoke;
+}
+
+.contacto .mail form .cell:focus::placeholder {
+  color: #d2d2d2;
+}
+
+.contacto .mail form .cell:focus::-webkit-scrollbar {
+  background-color: #64738c;
+}
+
+.contacto .mail form .cell:focus::-webkit-scrollbar-track {
+  background-color: #64738c;
+}
+
+.contacto .mail form .cell:focus::-webkit-scrollbar-thumb {
+  background-color: whitesmoke;
+}
+
+.contacto .mail form .cell:focus::-webkit-scrollbar-thumb:hover {
+  background-color: #d2d2d2;
+}
+
+.contacto .mail form .submit {
+  width: 5em;
+  height: 2.5em;
+  margin-top: 1em;
+  background-color: #64738c;
+  border-style: none;
+  border: none;
+  border-radius: 5px;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.1rem;
+  color: whitesmoke;
+  transition: all .2s ease;
+}
+
+.contacto .mail form .submit:hover {
+  background-color: #1a6699;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #9fa3a9;
 }
 
 footer {
-  margin-top: 4em;
   background-color: #9fa3a9;
   box-shadow: 0 0 1em #9fa3a9;
 }
@@ -471,7 +597,8 @@ footer {
 }
 
 .creator h3 span {
-  margin-left: 0.3em;
+  margin-left: .3em;
+  transition: all .2s ease;
 }
 
 .creator h3 span:hover {

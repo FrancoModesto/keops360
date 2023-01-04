@@ -2,8 +2,9 @@
 $myFont: 'Dosis', sans-serif;
 
 $myBlack: #393d42;
-$myGrey: #9fa3a9;
 $myDarkGrey: #64738c;
+$myGrey: #9fa3a9;
+$myMediumGrey: rgb(210, 210, 210);
 $myLightGrey: rgb(238, 238, 238);
 $myWhite: whitesmoke;
 $myBlue: #357fb2;
@@ -38,7 +39,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0.75em;
+    width: .75em;
     background-color: $myWhite;
 }
 
@@ -47,7 +48,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 0.5em;
+    border-radius: .5em;
     background-color: $myBlue;
 
     &:hover {
@@ -71,13 +72,15 @@ body {
     right: 2em;
 
     background-color: $myWhite;
-    border: $myWhite solid 0.125em;
+    border: $myWhite solid .125em;
     border-radius: 50%;
     box-shadow: $darkShadow;
 
+    transition: all .2s ease;
+
     &:hover {
         background-color: $myDarkBlue;
-        border: $myDarkBlue solid 0.125em;
+        border: $myDarkBlue solid .125em;
         border-radius: 50%;
     }
 }
@@ -146,7 +149,7 @@ header nav ul {
 //MAIN
 h1 {
     text-align: center;
-    margin-bottom: 0.9em;
+    margin-bottom: .9em;
 
     font-size: 4.5rem;
     color: $myGreen;
@@ -197,7 +200,8 @@ h1 {
 
         .flecha {
             width: 2.5em;
-            opacity: 0.8;
+            opacity: .8;
+            transition: all .2s ease;
 
             &.I {
                 margin-left: 5em;
@@ -234,6 +238,7 @@ h1 {
 
             border-radius: 50%;
             box-shadow: $darkerShadow;
+            transition: all .2s ease;
 
             &:hover {
                 cursor: pointer;
@@ -254,7 +259,7 @@ h1 {
 
 //MÓDULOS
 .modulos {
-    margin-top: 8em;
+    margin-top: 15vh;
 
     .cards {
         width: 90%;
@@ -320,7 +325,7 @@ h1 {
             color: $myWhite;
 
             span {
-                margin-right: 0.2em;
+                margin-right: .2em;
                 color: $myGreen;
             }
         }
@@ -338,8 +343,8 @@ h1 {
 
 //NOSOTROS
 .nosotros {
-    margin-top: 9em;
-    padding: 8em 0 9em 0;
+    margin-top: 15vh;
+    padding: 15vh 0 2vh 0;
     background-color: $myLightGrey;
 
     .boards {
@@ -412,11 +417,19 @@ h1 {
             overflow-x: hidden;
             overflow-y: auto;
 
+            &::-webkit-scrollbar {
+                background-color: $myGreen;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: $myGreen;
+            }
+
             &::-webkit-scrollbar-thumb {
-                background-color: $myGrey;
+                background-color: $myWhite;
 
                 &:hover {
-                    background-color: $myDarkGrey;
+                    background-color: $myMediumGrey;
                 }
             }
 
@@ -432,6 +445,14 @@ h1 {
 
                 p {
                     direction: ltr;
+                }
+
+                &::-webkit-scrollbar {
+                    background-color: $myBlue;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background-color: $myBlue;
                 }
             }
         }
@@ -449,12 +470,13 @@ h1 {
 
 //CONTACTANOS
 .contactanos {
-    margin-top: 8em;
+    padding-top: 13vh;
+    background-color: $myLightGrey;
 }
 
 .contacto {
     margin: auto;
-    height: 60vh;
+    height: 87vh;
 
     display: flex;
     align-items: center;
@@ -466,7 +488,7 @@ h1 {
     }
 
     .redes {
-        border: $myLightGrey 3px solid;
+        background-color: $myWhite;
 
         display: flex;
         flex-direction: column;
@@ -511,13 +533,127 @@ h1 {
 
     .mail {
         background-color: $myLightGrey;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            text-align: center;
+            margin-bottom: .5em;
+
+            font-size: 3.5rem;
+            color: $myDarkGrey;
+        }
+
+        form {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+
+            .fix {
+                width: 40%;
+                height: 8em;
+                overflow: hidden;
+                border-radius: 5px;
+            }
+
+            .cell {
+                height: 2.5em;
+                width: 40%;
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: $myDarkGrey;
+
+                    &:hover {
+                        background-color: $myDarkBlue;
+                    }
+                }
+
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                background-color: $myWhite;
+                padding-left: 1em;
+                padding-right: 1em;
+
+                font-family: $myFont;
+                font-size: 1.1rem;
+                color: $myDarkGrey;
+                transition: all .2s ease;
+
+                &.msg {
+                    resize: none;
+                    width: 100%;
+                    height: 100%;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+
+                    padding-top: 0.5em;
+                    padding-bottom: 0.5em;
+                }
+
+                &:focus {
+                    background-color: $myDarkGrey;
+                    color: $myWhite;
+
+                    &::placeholder {
+                        color: $myMediumGrey;
+                    }
+
+                    &::-webkit-scrollbar {
+                        background-color: $myDarkGrey;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: $myDarkGrey;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $myWhite;
+
+                        &:hover {
+                            background-color: $myMediumGrey;
+                        }
+                    }
+                }
+            }
+
+            .submit {
+                width: 5em;
+                height: 2.5em;
+                margin-top: 1em;
+
+                background-color: $myDarkGrey;
+                border-style: none;
+                border: none;
+                border-radius: 5px;
+
+                font-family: $myFont;
+                font-size: 1.1rem;
+                color: $myWhite;
+                transition: all .2s ease;
+
+                &:hover {
+                    background-color: $myDarkBlue;
+                    cursor: pointer;
+                }
+            }
+        }
     }
+}
+
+::placeholder {
+    color: $myGrey;
 }
 
 
 //FOOTER
 footer {
-    margin-top: 4em;
     background-color: $myGrey;
     box-shadow: $commonShadow;
 }
@@ -538,11 +674,12 @@ footer {
     color: $myBlack;
 
     span {
-        margin-left: 0.3em;
+        margin-left: .3em;
+        transition: all .2s ease;
 
         &:hover {
             color: $myDarkBlue;
-            text-shadow: 0 0 0.5em $myBlue;
+            text-shadow: 0 0 .5em $myBlue;
         }
     }
 }
@@ -563,7 +700,7 @@ footer {
                 transform: scale(1.1);
                 background-color: $myDarkGreen;
                 box-shadow: none;
-                filter: drop-shadow(0 0 0.5em $myDarkGreen);
+                filter: drop-shadow(0 0 .5em $myDarkGreen);
             }
 
             img {
