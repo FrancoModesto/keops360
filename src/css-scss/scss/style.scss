@@ -486,29 +486,29 @@ h1 {
         width: 50%;
         height: 100%;
         padding-top: 15vh;
-    }
-
-    .redes {
-        background-color: $myWhite;
 
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
 
         h2 {
             text-align: center;
-            margin-bottom: 1em;
+            margin-bottom: 5vh;
 
             font-size: 3.5rem;
             color: $myDarkGrey;
         }
+    }
+
+    .redes {
+        background-color: $myWhite;
 
         ul {
             list-style-type: none;
 
             li {
                 font-size: 2rem;
-                margin-bottom: 5vh;
+                margin-bottom: 1em;
                 transition: all .3s ease;
 
                 a {
@@ -533,18 +533,6 @@ h1 {
 
     .mail {
         background-color: $myLightGrey;
-
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        h2 {
-            text-align: center;
-            margin-bottom: 5vh;
-
-            font-size: 3.5rem;
-            color: $myDarkGrey;
-        }
 
         form {
             width: 100%;
