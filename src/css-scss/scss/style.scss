@@ -31,6 +31,7 @@ body {
     font-size: 16px;
     font-family: $myFont;
     color: $myBlack;
+    overflow-x: hidden;
 }
 
 ::selection {
@@ -71,16 +72,16 @@ body {
     bottom: 2em;
     right: 2em;
 
-    background-color: $myWhite;
-    border: $myWhite solid .125em;
+    background-color: $myMediumGrey;
+    border: $myMediumGrey solid .125em;
     border-radius: 50%;
     box-shadow: $darkShadow;
 
     transition: all .2s ease;
 
     &:hover {
-        background-color: $myDarkBlue;
-        border: $myDarkBlue solid .125em;
+        background-color: $myWhite;
+        border: $myWhite solid .125em;
         border-radius: 50%;
     }
 }
@@ -136,10 +137,17 @@ header nav ul {
         }
 
         .green {
-            color: $myGreen;
+            border-radius: 50px;
+            padding: 0.3em 0.5em 0.3em 0.5em;
+
+            color: $myWhite;
+            background-color: $myGreen;
+            transition: all .2s ease;
 
             &:hover {
-                color: $myDarkGreen;
+                font-weight: normal;
+                color: $myWhite;
+                background-color: $myDarkGreen;
             }
         }
     }

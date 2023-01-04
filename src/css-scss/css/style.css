@@ -10,6 +10,7 @@ body {
   font-size: 16px;
   font-family: "Dosis", sans-serif;
   color: #393d42;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -48,16 +49,16 @@ body {
   position: fixed;
   bottom: 2em;
   right: 2em;
-  background-color: whitesmoke;
-  border: whitesmoke solid 0.125em;
+  background-color: #d2d2d2;
+  border: #d2d2d2 solid 0.125em;
   border-radius: 50%;
   box-shadow: 0 0em 1em #393d42;
   transition: all .2s ease;
 }
 
 .goTopButton:hover {
-  background-color: #1a6699;
-  border: #1a6699 solid 0.125em;
+  background-color: whitesmoke;
+  border: whitesmoke solid 0.125em;
   border-radius: 50%;
 }
 
@@ -106,11 +107,17 @@ header nav ul li a:hover {
 }
 
 header nav ul li .green {
-  color: #8ac166;
+  border-radius: 50px;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  color: whitesmoke;
+  background-color: #8ac166;
+  transition: all .2s ease;
 }
 
 header nav ul li .green:hover {
-  color: #53ab3c;
+  font-weight: normal;
+  color: whitesmoke;
+  background-color: #53ab3c;
 }
 
 h1 {
