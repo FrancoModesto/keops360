@@ -83,3 +83,21 @@ function limpiarYActivarMovimientoAutomatico() {
 }
 
 limpiarYActivarMovimientoAutomatico()
+
+
+//MENÚ HAMBURGUESA
+const menuH = document.querySelector(".menuH")
+const menu = document.querySelector("nav ul")
+
+let on = true
+menuH.addEventListener("click", () => {
+    if (on) {
+        menu.style.left = "0"
+        menuH.style.opacity = "1"
+        on = false
+    } else {
+        menu.style.left = "-100%"
+        menuH.style.opacity = "0.5"
+        on = true
+    }
+})

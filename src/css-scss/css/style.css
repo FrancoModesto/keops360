@@ -19,7 +19,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: .75em;
+  width: 0.75em;
   background-color: whitesmoke;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: .5em;
+  border-radius: 0.5em;
   background-color: #357fb2;
 }
 
@@ -53,7 +53,7 @@ body {
   border: #d2d2d2 solid 0.125em;
   border-radius: 50%;
   box-shadow: 0 0em 1em #393d42;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .goTopButton:hover {
@@ -75,9 +75,13 @@ header {
   box-shadow: 0 0 1em #9fa3a9;
 }
 
+header .menuH {
+  display: none;
+}
+
 header .brand {
   width: 20em;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 header .brand img {
@@ -111,7 +115,7 @@ header nav ul li .green {
   padding: 0.3em 0.5em 0.3em 0.5em;
   color: whitesmoke;
   background-color: #8ac166;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 header nav ul li .green:hover {
@@ -122,7 +126,7 @@ header nav ul li .green:hover {
 
 h1 {
   text-align: center;
-  margin-bottom: .9em;
+  margin-bottom: 0.9em;
   font-size: 4.5rem;
   color: #8ac166;
 }
@@ -145,7 +149,7 @@ h1.blue {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   transform: translateX(0%);
 }
 
@@ -167,8 +171,8 @@ h1.blue {
 
 .slider .flechas .flecha {
   width: 2.5em;
-  opacity: .8;
-  transition: all .2s ease;
+  opacity: 0.8;
+  transition: all 0.2s ease;
 }
 
 .slider .flechas .flecha.I {
@@ -202,7 +206,7 @@ h1.blue {
   margin: 1em;
   border-radius: 50%;
   box-shadow: 0 0em 1em black;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .slider .puntos .punto:hover {
@@ -213,7 +217,7 @@ h1.blue {
 .slider .puntos .punto.activo {
   background-color: #8ac166;
   box-shadow: 0 0 1em #53ab3c;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   transform: scale(1.2);
 }
 
@@ -249,7 +253,7 @@ h1.blue {
   padding: 1.5em;
   border-radius: 10px;
   box-shadow: 0 0 1em #9fa3a9;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .card .front {
@@ -282,7 +286,7 @@ h1.blue {
 }
 
 .card .back p span {
-  margin-right: .2em;
+  margin-right: 0.2em;
   color: #8ac166;
 }
 
@@ -325,15 +329,17 @@ h1.blue {
   width: 100%;
   height: 100%;
   background-color: whitesmoke;
+  padding: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .board .cover h2 {
   font-size: 2.5rem;
   color: #64738c;
+  text-align: center;
 }
 
 .board .content {
@@ -420,7 +426,6 @@ h1.blue {
 }
 
 .contacto {
-  margin: auto;
   height: 87vh;
   display: flex;
   align-items: center;
@@ -430,7 +435,7 @@ h1.blue {
 .contacto .mail {
   width: 50%;
   height: 100%;
-  padding-top: 15vh;
+  padding-top: 13vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -455,7 +460,7 @@ h1.blue {
 .contacto .redes ul li {
   font-size: 2rem;
   margin-bottom: 1em;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .contacto .redes ul li a {
@@ -484,7 +489,7 @@ h1.blue {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .contacto .mail form .fix {
@@ -506,7 +511,7 @@ h1.blue {
   font-family: "Dosis", sans-serif;
   font-size: 1.1rem;
   color: #64738c;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .contacto .mail form .cell::-webkit-scrollbar-thumb {
@@ -563,7 +568,7 @@ h1.blue {
   font-family: "Dosis", sans-serif;
   font-size: 1.1rem;
   color: whitesmoke;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .contacto .mail form .submit:hover {
@@ -595,8 +600,8 @@ footer {
 }
 
 .creator h3 span {
-  margin-left: .3em;
-  transition: all .2s ease;
+  margin-left: 0.3em;
+  transition: all 0.2s ease;
 }
 
 .creator h3 span:hover {
@@ -614,7 +619,7 @@ footer {
   display: flex;
   border-radius: 50%;
   box-shadow: 0 0em 1em #393d42;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .creator ul li a:hover {
@@ -633,4 +638,183 @@ footer {
   font-size: 1.2rem;
   text-align: center;
   color: #393d42;
+}
+
+@media screen and (max-width: 1365px) {
+  .contacto .redes,
+  .contacto .mail {
+    padding-top: 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  header {
+    height: 10em;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .slider {
+    height: 73.5vh;
+  }
+  .modulos {
+    margin-top: 11em;
+  }
+  .nosotros {
+    margin-top: 11em;
+    padding-top: 11em;
+    padding-bottom: 0;
+  }
+  .contactanos {
+    padding-top: 10em;
+  }
+  .contacto .mail form .fix {
+    width: 60%;
+  }
+  .contacto .mail form .cell {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .slider {
+    height: 60vh;
+  }
+  .contacto {
+    flex-direction: column;
+    height: auto;
+  }
+  .contacto .redes,
+  .contacto .mail {
+    width: 100%;
+    height: 50%;
+    padding: 5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .board {
+    height: 25em;
+  }
+  .board .cover {
+    top: 0;
+  }
+  .board .content {
+    flex-direction: column;
+  }
+  .board .content .board-img {
+    width: 100%;
+    height: 40%;
+  }
+  .board .content .board-text {
+    width: 100%;
+    height: 60%;
+  }
+  .board:hover :first-child {
+    left: 0;
+    top: -100%;
+  }
+  .board.right:hover :first-child {
+    left: 0;
+    top: 100%;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  header {
+    height: 7em;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+  }
+  header .menuH {
+    display: flex;
+    width: 2.5em;
+    margin-left: 3em;
+    opacity: 0.5;
+  }
+  header .menuH:hover {
+    cursor: pointer;
+  }
+  header nav ul {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    background-color: whitesmoke;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 1em #9fa3a9;
+  }
+  .slider {
+    height: 50vh;
+  }
+  .slider .container {
+    height: 88%;
+  }
+  .slider .puntos {
+    height: 12%;
+  }
+  .slider .flechas .flecha.I {
+    margin-left: 2em;
+  }
+  .slider .flechas .flecha.D {
+    margin-right: 2em;
+  }
+  .modulos {
+    margin-top: 8em;
+  }
+  .nosotros {
+    margin-top: 8em;
+    padding-top: 8em;
+  }
+  .contactanos {
+    padding-top: 7em;
+  }
+  .contacto .mail form .fix {
+    width: 80%;
+  }
+  .contacto .mail form .cell {
+    width: 80%;
+  }
+  footer .creator {
+    flex-direction: column;
+    gap: 1em;
+  }
+  footer .creator h3 {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .brand {
+    width: 15em;
+  }
+  .contacto .redes ul li {
+    font-size: 1.5rem;
+  }
+  .contacto .mail form .fix {
+    width: 100%;
+  }
+  .contacto .mail form .cell {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .menuH {
+    margin-left: 1em;
+  }
+  .slider {
+    height: 40vh;
+  }
+  .slider .flechas .flecha.I {
+    margin-left: 1em;
+  }
+  .slider .flechas .flecha.D {
+    margin-right: 1em;
+  }
 }
