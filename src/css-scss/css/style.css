@@ -45,7 +45,7 @@ body {
 }
 
 .goTopButton {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   bottom: 2em;
   right: 2em;
@@ -63,7 +63,7 @@ body {
 }
 
 header {
-  z-index: 2;
+  z-index: 3;
   position: sticky;
   top: 0;
   display: flex;
@@ -324,6 +324,7 @@ h1.blue {
 }
 
 .board .cover {
+  z-index: 2;
   position: absolute;
   left: 0;
   width: 100%;
@@ -354,6 +355,7 @@ h1.blue {
 }
 
 .board .content .board-img {
+  z-index: 1;
   width: 30%;
   height: 100%;
   overflow: hidden;
@@ -680,6 +682,12 @@ footer {
   .slider {
     height: 60vh;
   }
+  .slider .container {
+    height: 88%;
+  }
+  .slider .puntos {
+    height: 12%;
+  }
   .contacto {
     flex-direction: column;
     height: auto;
@@ -751,12 +759,6 @@ footer {
   }
   .slider {
     height: 50vh;
-  }
-  .slider .container {
-    height: 88%;
-  }
-  .slider .puntos {
-    height: 12%;
   }
   .slider .flechas .flecha.I {
     margin-left: 2em;
