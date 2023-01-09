@@ -45,7 +45,7 @@ body {
 }
 
 .goTopButton {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   bottom: 2em;
   right: 2em;
@@ -63,7 +63,7 @@ body {
 }
 
 header {
-  z-index: 2;
+  z-index: 3;
   position: sticky;
   top: 0;
   left: 0;
@@ -326,6 +326,7 @@ h1.blue {
 }
 
 .board .cover {
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
@@ -357,6 +358,7 @@ h1.blue {
 }
 
 .board .content .board-img {
+  z-index: 1;
   width: 30%;
   height: 100%;
   overflow: hidden;
@@ -705,10 +707,6 @@ footer {
   .board {
     height: 25em;
   }
-  .board .cover {
-    top: 0;
-    left: 0;
-  }
   .board .content {
     flex-direction: column;
   }
@@ -719,14 +717,6 @@ footer {
   .board .content .board-text {
     width: 100%;
     height: 60%;
-  }
-  .board:hover :first-child {
-    left: 0;
-    top: -100%;
-  }
-  .board.right:hover :first-child {
-    left: 0;
-    top: 100%;
   }
 }
 
