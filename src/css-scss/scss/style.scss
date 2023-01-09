@@ -67,7 +67,7 @@ body {
 }
 
 .goTopButton {
-    z-index: 3;
+    z-index: 2;
     position: fixed;
     bottom: 2em;
     right: 2em;
@@ -89,7 +89,7 @@ body {
 //***********************
 //HEADER
 header {
-    z-index: 3;
+    z-index: 2;
     position: sticky;
     top: 0;
     left: 0;
@@ -383,7 +383,6 @@ h1 {
     border-radius: 10px;
 
     .cover {
-        z-index: 2;
         position: absolute;
         top: 0;
         left: 0;
@@ -416,7 +415,6 @@ h1 {
         }
 
         .board-img {
-            z-index: 1;
             width: 30%;
             height: 100%;
             overflow: hidden;
