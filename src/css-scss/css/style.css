@@ -417,14 +417,6 @@ h1.blue {
   background-color: #357fb2;
 }
 
-.board:hover :first-child {
-  left: -100%;
-}
-
-.board.right:hover :first-child {
-  left: 100%;
-}
-
 .contactanos {
   padding-top: 13vh;
   background-color: #eeeeee;

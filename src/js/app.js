@@ -85,6 +85,46 @@ function limpiarYActivarMovimientoAutomatico() {
 limpiarYActivarMovimientoAutomatico()
 
 
+//BOARDS - FIX
+const boards = document.querySelectorAll(".board")
+const covers = document.querySelectorAll(".cover")
+
+if (window.screen.width > 800) {
+    boards.forEach((cadaBoard, i) => {
+        boards[i].addEventListener("mouseover", () => {
+            if (boards[i].classList.contains("right")) {
+                covers[i].style.left = "100%"
+            } else {
+                covers[i].style.left = "-100%"
+            }
+        })
+
+        boards[i].addEventListener("mouseout", () => {
+            covers[i].style.left = "0"
+        })
+    })
+} else {
+    boards.forEach((cadaBoard, i) => {
+        covers[i].style.left = "0"
+        boards[i].addEventListener("click", () => {
+            if (boards[i].classList.contains("right")) {
+                if (covers[i].style.left == "0px") {
+                    covers[i].style.left = "100%"
+                } else {
+                    covers[i].style.left = "0"
+                }
+            } else {
+                if (covers[i].style.left == "0px") {
+                    covers[i].style.left = "-100%"
+                } else {
+                    covers[i].style.left = "0"
+                }
+            }
+        })
+    })
+}
+
+
 //MENÚ HAMBURGUESA
 const menuH = document.querySelector(".menuH")
 const menu = document.querySelector("nav ul")

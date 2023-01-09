@@ -475,14 +475,6 @@ h1 {
             }
         }
     }
-
-    &:hover :first-child {
-        left: -100%;
-    }
-
-    &.right:hover :first-child {
-        left: 100%;
-    }
 }
 
 //***********************
