@@ -89,6 +89,7 @@ body {
 //***********************
 //HEADER
 header {
+    transform: translateZ(1000px); //This fixes CARDS overlaping issue.
     z-index: 2;
     position: sticky;
     top: 0;
@@ -400,7 +401,8 @@ h1 {
         justify-content: center;
         transition: all 0.5s ease;
 
-        mask-image: #fff; //This fixes OVERFLOW_HIDDEN, BORDER_RADIUS, POSITIONED elements problem.
+        -webkit-mask-image: #fff;
+        mask-image: #fff; //This semi-fixes OVERFLOW_HIDDEN, BORDER_RADIUS, POSITIONED elements problem.
 
         h2 {
             font-size: 2.5rem;
@@ -416,7 +418,8 @@ h1 {
         background-color: $myGreen;
         border-radius: 10px;
 
-        mask-image: #fff; //This fixes OVERFLOW_HIDDEN, BORDER_RADIUS, POSITIONED elements problem.
+        -webkit-mask-image: #fff;
+        mask-image: #fff; //This semi-fixes OVERFLOW_HIDDEN, BORDER_RADIUS, POSITIONED elements problem.
 
         &.blue {
             background-color: $myBlue;

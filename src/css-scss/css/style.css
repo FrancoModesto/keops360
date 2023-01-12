@@ -63,6 +63,7 @@ body {
 }
 
 header {
+  transform: translateZ(1000px);
   z-index: 2;
   position: sticky;
   top: 0;
@@ -340,6 +341,7 @@ h1.blue {
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
+  -webkit-mask-image: #fff;
   mask-image: #fff;
 }
 
@@ -355,6 +357,7 @@ h1.blue {
   display: flex;
   background-color: #8ac166;
   border-radius: 10px;
+  -webkit-mask-image: #fff;
   mask-image: #fff;
 }
 
