@@ -241,7 +241,6 @@ h1.blue {
 }
 
 .card {
-  z-index: 1;
   position: relative;
   width: 16em;
   height: 20em;
@@ -324,8 +323,8 @@ h1.blue {
   width: 90%;
   height: 12em;
   overflow: hidden;
-  box-shadow: 0 0 1em #9fa3a9;
   border-radius: 10px;
+  box-shadow: 0 0 1em #9fa3a9;
 }
 
 .board .cover {
@@ -334,14 +333,14 @@ h1.blue {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: whitesmoke;
   padding: 2em;
+  background-color: whitesmoke;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
-  /* this fixes the overflow:hidden in Chrome */
-  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  -webkit-mask-image: #fff;
 }
 
 .board .cover h2 {
@@ -355,6 +354,7 @@ h1.blue {
   height: 100%;
   display: flex;
   background-color: #8ac166;
+  border-radius: 10px;
 }
 
 .board .content.blue {
