@@ -57,7 +57,7 @@ body {
 }
 
 .goTopButton {
-  z-index: 3;
+  z-index: 2;
   position: fixed;
   bottom: 2em;
   right: 2em;
@@ -78,7 +78,7 @@ body {
 }
 
 header {
-  z-index: 3;
+  z-index: 2;
   position: sticky;
   top: 0;
   left: 0;
@@ -157,6 +157,8 @@ header nav ul li .green:hover {
 
 h1 {
   text-align: center;
+  width: 90%;
+  margin: auto;
   margin-bottom: 0.9em;
   font-size: 4.5rem;
   color: #8ac166;
@@ -436,7 +438,6 @@ h1.blue {
 }
 
 .board .cover {
-  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
@@ -478,7 +479,6 @@ h1.blue {
 }
 
 .board .content .board-img {
-  z-index: 1;
   width: 30%;
   height: 100%;
   overflow: hidden;
@@ -935,6 +935,8 @@ footer {
   .board .content .board-img {
     width: 100%;
     height: 40%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 
   .board .content .board-text {
@@ -981,9 +983,9 @@ footer {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 1em;
+    gap: 1.5em;
     background-color: whitesmoke;
-    padding: 2em;
+    padding: 2em 2em 2.5em 2em;
     border-radius: 10px;
     -webkit-box-shadow: 0 0 1em #9fa3a9;
     box-shadow: 0 0 1em #9fa3a9;

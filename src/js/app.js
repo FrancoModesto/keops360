@@ -106,18 +106,27 @@ if (window.screen.width > 800) {
 } else {
     boards.forEach((cadaBoard, i) => {
         covers[i].style.left = "0"
+        covers[i].style.top = "0"
+
         boards[i].addEventListener("click", () => {
+            covers.forEach((cadaCover, j) => {
+                if (j != i) {
+                    covers[j].style.left = "0"
+                    covers[j].style.top = "0"
+                }
+            })
+
             if (boards[i].classList.contains("right")) {
-                if (covers[i].style.left == "0px") {
-                    covers[i].style.left = "100%"
+                if (covers[i].style.top == "0px") {
+                    covers[i].style.top = "100%"
                 } else {
-                    covers[i].style.left = "0"
+                    covers[i].style.top = "0"
                 }
             } else {
-                if (covers[i].style.left == "0px") {
-                    covers[i].style.left = "-100%"
+                if (covers[i].style.top == "0px") {
+                    covers[i].style.top = "-100%"
                 } else {
-                    covers[i].style.left = "0"
+                    covers[i].style.top = "0"
                 }
             }
         })
