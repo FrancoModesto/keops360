@@ -323,8 +323,8 @@ h1.blue {
   width: 90%;
   height: 12em;
   overflow: hidden;
-  border-radius: 10px;
   box-shadow: 0 0 1em #9fa3a9;
+  border-radius: 10px;
 }
 
 .board .cover {
@@ -340,7 +340,7 @@ h1.blue {
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
-  -webkit-mask-image: #fff;
+  mask-image: #fff;
 }
 
 .board .cover h2 {
@@ -355,6 +355,7 @@ h1.blue {
   display: flex;
   background-color: #8ac166;
   border-radius: 10px;
+  mask-image: #fff;
 }
 
 .board .content.blue {

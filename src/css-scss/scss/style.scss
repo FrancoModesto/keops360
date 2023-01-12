@@ -381,8 +381,8 @@ h1 {
     height: 12em;
     overflow: hidden;
 
-    border-radius: 10px;
     box-shadow: $commonShadow;
+    border-radius: 10px;
 
     .cover {
         position: absolute;
@@ -400,7 +400,7 @@ h1 {
         justify-content: center;
         transition: all 0.5s ease;
 
-        -webkit-mask-image: #fff; //OVERFLOW_HIDDEN, BORDER_RADIUS, POSITIONED - FIX
+        mask-image: #fff; //This fixes OVERFLOW_HIDDEN, BORDER_RADIUS, POSITIONED elements problem.
 
         h2 {
             font-size: 2.5rem;
@@ -415,6 +415,8 @@ h1 {
         display: flex;
         background-color: $myGreen;
         border-radius: 10px;
+
+        mask-image: #fff; //This fixes OVERFLOW_HIDDEN, BORDER_RADIUS, POSITIONED elements problem.
 
         &.blue {
             background-color: $myBlue;
