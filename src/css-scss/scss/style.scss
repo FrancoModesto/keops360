@@ -31,6 +31,7 @@ body {
     font-size: 16px;
     font-family: $myFont;
     color: $myBlack;
+    font-weight: 400;
     overflow-x: hidden;
 }
 
@@ -134,11 +135,12 @@ header nav ul {
             text-decoration: none;
             color: $myBlue;
             font-size: 1.5rem;
+            transition: all 0.2s ease;
 
             &:hover {
                 text-decoration: none;
-                font-weight: bold;
                 color: $myDarkBlue;
+                -webkit-text-stroke: 1px $myDarkBlue; //This fixes the bold font shift issue.
             }
         }
 
@@ -148,10 +150,9 @@ header nav ul {
 
             color: $myWhite;
             background-color: $myGreen;
-            transition: all 0.2s ease;
 
             &:hover {
-                font-weight: normal;
+                -webkit-text-stroke: 0px black;
                 color: $myWhite;
                 background-color: $myDarkGreen;
             }
@@ -168,6 +169,7 @@ h1 {
 
     font-size: 4.5rem;
     color: $myGreen;
+    font-weight: 600;
 
     &.blue {
         color: $myBlue;
@@ -326,6 +328,7 @@ h1 {
             text-align: center;
             font-size: 2rem;
             color: $myDarkGrey;
+            font-weight: 600;
         }
     }
 
@@ -405,9 +408,10 @@ h1 {
         mask-image: #fff; //This semi-fixes OVERFLOW_HIDDEN, BORDER_RADIUS, POSITIONED elements problem.
 
         h2 {
+            text-align: center;
             font-size: 2.5rem;
             color: $myDarkGrey;
-            text-align: center;
+            font-weight: 600;
         }
     }
 
@@ -515,6 +519,7 @@ h1 {
 
             font-size: 3.5rem;
             color: $myDarkGrey;
+            font-weight: 600;
         }
     }
 
@@ -678,6 +683,7 @@ footer {
 
     font-size: 1.3rem;
     color: $myBlack;
+    font-weight: 600;
 
     span {
         margin-left: 0.3em;
@@ -722,6 +728,7 @@ footer {
     font-size: 1.2rem;
     text-align: center;
     color: $myBlack;
+    font-weight: 600;
 }
 
 //***********************
