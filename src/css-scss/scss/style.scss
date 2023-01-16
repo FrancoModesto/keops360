@@ -19,7 +19,9 @@ $darkerShadow: 0 0em 1em black;
 
 //***********************
 //ALL
-* {
+*,
+*:before,
+*:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
