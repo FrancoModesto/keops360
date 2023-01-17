@@ -81,8 +81,8 @@ body {
   background-color: #d2d2d2;
   border: #d2d2d2 solid 0.125em;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0em 1em #393d42;
-  box-shadow: 0 0em 1em #393d42;
+  -webkit-box-shadow: 0 0 1em #393d42;
+  box-shadow: 0 0 1em #393d42;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -291,8 +291,8 @@ h1.blue {
   height: 1em;
   margin: 1em;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0em 1em black;
-  box-shadow: 0 0em 1em black;
+  -webkit-box-shadow: 0 0 1em black;
+  box-shadow: 0 0 1em black;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -515,8 +515,8 @@ h1.blue {
   width: 30%;
   height: 100%;
   overflow: hidden;
-  -webkit-box-shadow: 0 0em 1em #393d42;
-  box-shadow: 0 0em 1em #393d42;
+  -webkit-box-shadow: 0 0 1em #393d42;
+  box-shadow: 0 0 1em #393d42;
 }
 
 .board .content .board-img img {
@@ -849,8 +849,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0em 1em #393d42;
-  box-shadow: 0 0em 1em #393d42;
+  -webkit-box-shadow: 0 0 1em #393d42;
+  box-shadow: 0 0 1em #393d42;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
