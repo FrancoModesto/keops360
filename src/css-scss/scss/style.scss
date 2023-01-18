@@ -17,7 +17,7 @@ $commonShadow: 0 0 1em $myGrey;
 $darkShadow: 0 0 1em $myBlack;
 $darkerShadow: 0 0 1em black;
 
-//***********************
+//**********************
 //ALL
 *,
 *:before,
@@ -89,7 +89,7 @@ body {
     }
 }
 
-//***********************
+//**********************
 //HEADER
 header {
     transform: translateZ(1000px); //This fixes CARDS overlaping issue.
@@ -178,7 +178,7 @@ h1 {
     }
 }
 
-//***********************
+//**********************
 //SLIDER
 .slider {
     position: relative;
@@ -276,7 +276,7 @@ h1 {
     }
 }
 
-//***********************
+//**********************
 //MÓDULOS
 .modulos {
     margin-top: 15vh;
@@ -368,7 +368,7 @@ h1 {
     }
 }
 
-//***********************
+//**********************
 //NOSOTROS
 .nosotros {
     margin-top: 15vh;
@@ -499,7 +499,7 @@ h1 {
     }
 }
 
-//***********************
+//**********************
 //CONTACTANOS
 .contactanos {
     padding-top: 13vh;
@@ -671,7 +671,7 @@ h1 {
     color: $myGrey;
 }
 
-//***********************
+//**********************
 //FOOTER
 footer {
     background-color: $myGrey;
@@ -740,7 +740,7 @@ footer {
     font-weight: 600;
 }
 
-//***********************
+//**********************
 //MEDIA QUERIES
 @media screen and (max-width: 1365px) {
     .contacto {
